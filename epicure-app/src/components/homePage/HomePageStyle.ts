@@ -1,8 +1,9 @@
-import { MOBILE_TO_DESKTOP_THRESHOLD } from "constants/styleConsts";
+import { DESKTOP_LEFT_MARGIN, DESKTOP_WIDTH, MOBILE_LEFT_MARGIN, MOBILE_TO_DESKTOP_THRESHOLD, MOBILE_WIDTH } from "constants/styleConsts";
 import styled from "styled-components";
 
 export const Container = styled.div`
     margin:auto;
+    width: ${MOBILE_WIDTH};
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -10,7 +11,7 @@ export const Container = styled.div`
     row-gap: 35px;
 
     @media(min-width: ${MOBILE_TO_DESKTOP_THRESHOLD}px){
-        width: 90%;
+        width: calc(${DESKTOP_WIDTH} * 0.9);
     }
     
 `
@@ -26,7 +27,16 @@ export const SubContainer = styled.div`
 
 `
 
-export const FullWidthContainer = styled.div`
-    width: 100%;
-
+export const ColorBG = styled.div`
+    background-color: #FAFAFA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 99vw;
+    margin-left: -${MOBILE_LEFT_MARGIN};
+    margin-top: 7%;
+    margin-bottom: 9%;    
+    @media(min-width: ${MOBILE_TO_DESKTOP_THRESHOLD}px){
+        margin-left: -${DESKTOP_LEFT_MARGIN};
+    }
 `

@@ -1,7 +1,7 @@
 export const DESKTOP_WIDTH = "81.25vw"
 export const MOBILE_WIDTH = "85.076vw"
 export const MOBILE_LEFT_MARGIN = "7.462vw"
-export const DESKTOPLEFT_MARGIN = '9.375vw'
+export const DESKTOP_LEFT_MARGIN = '9.375vw'
 export const MOBILE_TO_DESKTOP_THRESHOLD = 768
 export const ITEM_CARD_BG_COLOR = "rgb(249,244,234)"
 export const FONT = 'Helvetica Neue'
@@ -23,6 +23,7 @@ export const DESKTOP_TEXT_SIZE = {
     navLink: '18px',
     footerLinks: '18px',
     foodCategory: '24px',
+    chefOfTheWeekText: '24px',
 };
 
 export const MOBILE_TEXT_SIZE = {
@@ -36,6 +37,8 @@ export const MOBILE_TEXT_SIZE = {
     navLink: '18px',
     footerLinks: '18px',
     foodCategory: '18px',
+    chefOfTheWeekText: '18px',
+
 
 };
 

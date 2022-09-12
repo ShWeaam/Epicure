@@ -26,17 +26,17 @@ export const ItemImg = styled.img`
 
 `
 
-export const ItemDescription = styled.div < { isResturant?: boolean }> `
+export const ItemDescription = styled.div < { isResturant?: boolean, isChefOfTheWeek?: boolean }> `
     display:flex;
     width: 100%;
     margin-left: 7%;
     flex-direction:column;
     align-items:start;
     justify-content: space-around;
-    min-height: ${(props) => props.isResturant ? 75 : 230}px;
+    min-height: ${(props) => (props.isResturant || props.isChefOfTheWeek) ? 75 : 230}px;
 
     @media(min-width: ${MOBILE_TO_DESKTOP_THRESHOLD}px){
-        min-height: ${(props) => props.isResturant ? 75 : 350}px;
+        min-height: ${(props) => (props.isResturant || props.isChefOfTheWeek) ? 75 : 350}px;
         align-items:center;
         margin-left: 0;
     }

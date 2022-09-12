@@ -8,9 +8,10 @@ export default function SingleItemCard(props: any) {
 
     const windowSize = SetWindowSize();
     const item = props.item;
-    const isResturant = () => props.type === "resturants";
-    const details = isResturant() ? item.chef : item.ingredients.join(', ');
-    const iconPath = item.category ? createIconPath(item.category) : false;
+    const resturantsState = () => props.type === "resturants";
+    const chefState = () => props.type === "chefOfTheWeekResturants";
+    const details = item.chef ?? item.ingredients?.join(', ') ?? false;
+    const foodTypeIconPath = item.category ? createIconPath(item.category) : false;
 
     let formatter = new Intl.NumberFormat('en-IL', {
         style: 'currency',
@@ -35,17 +36,17 @@ export default function SingleItemCard(props: any) {
             <ItemImgContainer>
                 <ItemImg src={item.imgUrl} />
             </ItemImgContainer>
-            <ItemDescription isResturant={isResturant()}>
+            <ItemDescription isResturant={resturantsState()} isChefOfTheWeek={chefState()}>
                 <ItemName>
                     {item.name}
                 </ItemName>
-                <ItemDetails >
+                {details && !chefState() && <ItemDetails >
                     {details}
-                </ItemDetails>
+                </ItemDetails>}
                 <ItemIconsContainer>
-                    {item.rating && windowSize >= MOBILE_TO_DESKTOP_THRESHOLD &&
+                    {item.rating && resturantsState() && windowSize >= MOBILE_TO_DESKTOP_THRESHOLD &&
                         <DynamicStar {...dynamicStarParams} />}
-                    {iconPath && <ItemIcon src={iconPath} />}
+                    {foodTypeIconPath && <ItemIcon src={foodTypeIconPath} />}
                     {item.price && <ItemPrice>
                         {formatter.format(item.price)}
                     </ItemPrice>}

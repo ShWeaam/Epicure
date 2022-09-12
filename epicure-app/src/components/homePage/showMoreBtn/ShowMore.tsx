@@ -6,13 +6,14 @@ import { CustomLink, FullWidthContainer, Icon, IconContainer } from './showMoreS
 
 interface Props {
     linkTo: string;
+    linkText?: string;
 }
 
 export default function ShowMore(props: Props) {
 
     return (
         <FullWidthContainer>
-            <CustomLink to={props.linkTo}>All {capitalizeFirstLetter(props.linkTo)}
+            <CustomLink to={props.linkTo}> {props.linkText ?? "All " + capitalizeFirstLetter(props.linkTo)}
                 <IconContainer>
                     <Icon src={showMoreArrow} />
                 </IconContainer>

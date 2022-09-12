@@ -3,9 +3,9 @@ import checkLegalPropsAndInRange from 'helpers/checkLegalPropsAndInRange';
 import { ItemsContainer } from './itemsCardsStyle';
 import SingleItemCard from 'components/itemCard/SingleItemCard';
 
-interface Props{
-    requiredState?:string,
-    cardsToShow:string|number
+interface Props {
+    requiredState?: string,
+    cardsToShow: string | number
 }
 
 export default function ItemsCards(props: Props) {
@@ -14,8 +14,8 @@ export default function ItemsCards(props: Props) {
         switch (props.requiredState) {
             case "resturants":
                 return state.resturants.value;
-            case "chefs":
-                return state.chefs.value;
+            case "chefOfTheWeekResturants":
+                return state.chefs.chefOfTheWeek.resturants;
             case "dishes":
                 return state.dishes.value;
             default:

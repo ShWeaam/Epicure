@@ -3,14 +3,13 @@ import styled from "styled-components"
 
 export const Container = styled.div`
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
     width: 100%;
     margin-bottom: 5%;
-    /* @media(min-width: ${MOBILE_TO_DESKTOP_THRESHOLD}px){
-    flex-direction: row;
-    } */
+    @media(min-width: ${MOBILE_TO_DESKTOP_THRESHOLD}px){
+        height: 270px;
+    }
 `
 
 export const ContainerHeader = styled.h2`
@@ -28,7 +27,8 @@ export const IconsContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    row-gap: 60px;
     @media(min-width: ${MOBILE_TO_DESKTOP_THRESHOLD}px){
         flex-direction: row;
     }
@@ -40,8 +40,6 @@ export const IconCard = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 35%;
-
     @media(min-width: ${MOBILE_TO_DESKTOP_THRESHOLD}px){
         width:30%;
         margin-bottom: 0;

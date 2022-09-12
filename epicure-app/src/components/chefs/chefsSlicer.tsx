@@ -6,7 +6,8 @@ export const chefsSlice = createSlice({
 
   initialState: {
     value: [],
-    shouldFetch: true
+    shouldFetch: true,
+    chefOfTheWeek: {}
   },
 
   reducers: {
@@ -24,18 +25,17 @@ export const chefsSlice = createSlice({
 
     addResturantsForChef: (state, action) => {
       let indexOfChef = action.payload.indexOfChef;
-      let resturants = {
-        resturants: action.payload.resturants
-      };
-      console.log(state.value[indexOfChef]);
-      state.value[indexOfChef] = _.merge(state.value[indexOfChef], resturants);
-      console.log(indexOfChef);
-      console.log(resturants);
+      let resturants = action.payload.resturants;
+      state.value[indexOfChef] = _.merge(state.value[indexOfChef], {resturants});
+    },
+
+    setChefOfTheWeek: (state, action) => {
+      state.chefOfTheWeek = action.payload;
     }
   },
 })
 
-export const { setChefs, deleteChefs, setShouldFetchChefs, addResturantsForChef } = chefsSlice.actions
+export const { setChefs, deleteChefs, setShouldFetchChefs, addResturantsForChef, setChefOfTheWeek } = chefsSlice.actions
 
 export default chefsSlice.reducer
 
