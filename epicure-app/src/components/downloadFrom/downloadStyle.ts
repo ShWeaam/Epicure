@@ -17,18 +17,15 @@ export const Container = styled.div`
 `
 
 export const Frame = styled.div`
+    display: flex;
     border-radius:10px;
     border:1px solid black;
-    width:60%;
-    display: flex;
+    width: 180px;
     justify-content: space-around;
     height: 52px;
-    @media(min-width: ${MOBILE_TO_DESKTOP_THRESHOLD}px){
-        width: 17%;
-    }
 `
-export const IconContainer = styled.div`
-    width: 15%;
+export const IconContainer = styled.div < { logoType: string }>`
+    width: ${(props) => props.logoType === "apple" ? 25 : 20}px;
     display: flex;
     align-items: center;
     justify-content: center;

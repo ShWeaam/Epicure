@@ -1,18 +1,23 @@
-import ShowMore from 'components/homePage/showMoreBtn/ShowMore'
+import ShowMore from 'components/showMoreBtn/ShowMore'
 import ListOfItemCards from 'components/listOfItemCards/ListOfItemCards'
 import SingleChef from 'components/singleChef/SingleChef'
-import { CHEF_OF_THE_WEEK_TITLE } from 'constants/constants'
-import React from 'react'
+import { CARDS_TO_SHOW_IN_HOME, CHEF_OF_THE_WEEK_TITLE } from 'constants/constants'
+import { MOBILE_TO_DESKTOP_THRESHOLD } from 'constants/styleConsts'
+import SetWindowSize from 'helpers/setWindowSize'
+import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { ChefResturants, Container, ContainerTitle, Text, TextContainer } from './chefOfTheWeekStyle'
 
-interface Props {
 
-}
-
-export default function ChefOfTheWeek(props: any) {
+export default function ChefOfTheWeek() {
 
     const chef = useSelector((state: any) => state.chefs.chefOfTheWeek)
+    const windowSize = SetWindowSize();
+    let showMoreNeeded
+
+    useEffect(() => {
+        showMoreNeeded = () => chef.resturants.length > CARDS_TO_SHOW_IN_HOME && windowSize >= MOBILE_TO_DESKTOP_THRESHOLD
+    }, []);
 
     return (
         <Container>
@@ -28,8 +33,9 @@ export default function ChefOfTheWeek(props: any) {
             <ChefResturants>
                 <ListOfItemCards title={chef.name + "'s resturants"} requiredState={"chefOfTheWeekResturants"} />
             </ChefResturants>
-            <ShowMore linkTo={"chefs/" + chef.name} linkText={chef.name+" resturants"} />
-
+            {showMoreNeeded &&
+                < ShowMore linkTo={"chefs/" + chef.name} linkText={chef.name + " resturants"} />
+            }
 
         </Container>
     )

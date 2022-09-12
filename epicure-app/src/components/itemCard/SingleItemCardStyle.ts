@@ -9,10 +9,10 @@ export const Item = styled.div`
     align-items:center;
     margin-bottom: 5%;
     background-color: ${ITEM_CARD_BG_COLOR};
+
     @media(min-width: ${MOBILE_TO_DESKTOP_THRESHOLD}px){
         width:30%;
         margin-bottom: 1%;
-        align-items:center;
     }
 `
 

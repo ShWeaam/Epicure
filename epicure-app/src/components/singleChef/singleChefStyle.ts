@@ -1,7 +1,7 @@
 import { DESKTOP_TEXT_SIZE, MOBILE_TEXT_SIZE, MOBILE_TO_DESKTOP_THRESHOLD } from "constants/styleConsts";
 import styled from "styled-components";
 
-export const SingleChefContainer = styled.div`
+export const SingleChefContainer = styled.div < { inHomePage: boolean }> `
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -9,7 +9,7 @@ export const SingleChefContainer = styled.div`
     position: relative;
 
     @media(min-width: ${MOBILE_TO_DESKTOP_THRESHOLD}px){
-        width: 30%;
+        width: ${(props: any) => props.inHomePage ? 40 : 30}%;
     }
 `
 export const ChefImage = styled.img`
@@ -32,6 +32,5 @@ export const NameContainer = styled.div`
     @media(min-width: ${MOBILE_TO_DESKTOP_THRESHOLD}px){
         font-size: ${DESKTOP_TEXT_SIZE.h3};
         height: 80px;
-    
     }
 `

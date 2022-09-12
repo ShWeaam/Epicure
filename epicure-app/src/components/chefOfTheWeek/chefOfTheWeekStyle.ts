@@ -10,9 +10,10 @@ export const Container = styled.div`
     box-sizing: border-box;
 
     @media(min-width: ${MOBILE_TO_DESKTOP_THRESHOLD}px){
-        max-width:${DESKTOP_WIDTH};
+        max-width:calc(${DESKTOP_WIDTH}*0.9);
         flex-direction: row;
         flex-wrap: wrap;
+        margin: auto;
         justify-content: space-between;
     }
 `
@@ -36,7 +37,7 @@ export const TextContainer = styled.div`
     text-align: justify;
     text-justify: inter-word;
     @media(min-width: ${MOBILE_TO_DESKTOP_THRESHOLD}px){
-        width: 55%;
+        width: 45%;
         font-size: ${DESKTOP_TEXT_SIZE.chefOfTheWeekText};
         }
 `
@@ -48,5 +49,6 @@ letter-spacing: 1.3px;
 
 export const ChefResturants = styled.div`
 margin-top: 5%;
-
+width: 100%;
+display: flex;
 `

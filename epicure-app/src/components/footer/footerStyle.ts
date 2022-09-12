@@ -7,11 +7,13 @@ export const ButtonsContainer = styled.div`
     align-items:start;
     margin-top:40px;
     flex-direction:column;
+    margin-bottom: 5%;
     @media (min-width: ${MOBILE_TO_DESKTOP_THRESHOLD}px){
         width:clamp(350px,36%,450px);
         margin:auto;
         margin-top:40px;
         flex-direction:row;
+        margin-bottom: 5%;
     }
 `
 export const ButtonWithoutFrame = styled.button`

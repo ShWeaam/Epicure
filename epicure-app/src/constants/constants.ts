@@ -13,3 +13,4 @@ export const CATEGORY_ICON_PATH = "assets/foodCategory/"
 export const FOOD_ICONS_PATH = "assets/IconsMeaning/"
 export const FOOD_ICONS = ['spicy', 'vegitarian', 'vegan']
 export const ABOUT_US_TITLE = "About us"
+export const CARDS_TO_SHOW_IN_HOME = 3

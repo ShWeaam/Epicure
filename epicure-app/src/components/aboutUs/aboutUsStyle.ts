@@ -18,7 +18,7 @@ export const Title = styled.h2`
 export const Paragraph = styled.p`
     font-size: ${MOBILE_TEXT_SIZE.body};
     @media(min-width: ${MOBILE_TO_DESKTOP_THRESHOLD}px){
-        width: 60%;
+        width: 75%;
     }
 
 @media(min-width: ${MOBILE_TO_DESKTOP_THRESHOLD}px){

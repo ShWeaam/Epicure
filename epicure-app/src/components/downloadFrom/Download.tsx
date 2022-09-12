@@ -8,7 +8,7 @@ export default function Download() {
   return (
     <Container>
       <Frame>
-        <IconContainer>
+        <IconContainer logoType={"android"}>
           <Icon src={googlePlay} />
         </IconContainer>
         <TextFrame>
@@ -16,7 +16,7 @@ export default function Download() {
         </TextFrame>
       </Frame>
       <Frame>
-        <IconContainer>
+        <IconContainer logoType={"apple"}>
           <Icon src={apple} />
         </IconContainer>
         <TextFrame>

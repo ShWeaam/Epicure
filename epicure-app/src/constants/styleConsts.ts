@@ -1,5 +1,6 @@
 export const DESKTOP_WIDTH = "81.25vw"
 export const MOBILE_WIDTH = "85.076vw"
+export const DESKTOP_INNER_WIDTH = 0.9
 export const MOBILE_LEFT_MARGIN = "7.462vw"
 export const DESKTOP_LEFT_MARGIN = '9.375vw'
 export const MOBILE_TO_DESKTOP_THRESHOLD = 768
@@ -41,32 +42,3 @@ export const MOBILE_TEXT_SIZE = {
 
 
 };
-
-export const PRINT_LIKE_THIS = [
-    {
-        statName: 'hp',
-        printAs: 'HP'
-    },
-    {
-        statName: 'attack',
-        printAs: 'Attack'
-    },
-    {
-        statName: 'defense',
-        printAs: 'Defense'
-    },
-    {
-        statName: 'special-attack',
-        printAs: 'Special Atk'
-    },
-    {
-        statName: 'special-defense',
-        printAs: 'Special Def'
-    },
-    {
-        statName: 'speed',
-        printAs: 'Speed'
-    },
-]
-
-export { }

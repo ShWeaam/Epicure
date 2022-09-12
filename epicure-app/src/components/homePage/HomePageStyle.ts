@@ -17,11 +17,12 @@ export const Container = styled.div`
 `
 
 export const SubContainer = styled.div`
-    width: 80%;
+    width: 95%;
     display: flex;
     order:1;
 
     @media(min-width: ${MOBILE_TO_DESKTOP_THRESHOLD}px){
+        width: 65%;
         order:0;
     }
 
