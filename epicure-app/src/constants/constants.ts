@@ -1,0 +1,14 @@
+export const APP_NAME = "Epicure"
+export const REACT_API_URL = "http://localhost:4000/"
+export const RESTURANTS_URL = "resturants"
+export const CHEFS_URL = "chefs"
+export const DISHES_URL = "dishes"
+export const DATA_TO_GET_FROM_API = ["chefs", "resturants", "dishes"]
+export const HOME_PATH = "/"
+export const HOME_PG_SENTENCE = "Epicure works with the top chef resturants in Tel Aviv"
+export const RESTURANTS_CONTAINER_TITLE = "Popular Resturants in " + APP_NAME
+export const SIGNATURE_DISH_CONTAINER_TITLE = "Signature dishes"
+export const CATEGORY_ICON_PATH = "assets/foodCategory/"
+export const FOOD_ICONS_PATH = "assets/IconsMeaning/"
+export const FOOD_ICONS = ['spicy', 'vegitarian', 'vegan']
+export const ABOUT_US_TITLE = "About us"
