@@ -4,6 +4,7 @@ import { setDishes, setShouldFetchDishes } from "../components/dishes/dishesSlic
 import { resturantsSlice, setResturants, setShouldFetchResturants } from "../components/resturants/resturantsSlicer";
 import { CHEFS_URL, DATA_TO_GET_FROM_API, DISHES_URL, RESTURANTS_URL } from "../constants/constants";
 import { fetchData } from "./fetchData";
+import _ from "lodash";
 
 
 export async function useFetchAndLoadDataToStates() {
@@ -18,21 +19,22 @@ export async function useFetchAndLoadDataToStates() {
 
     if (selector.chefs.shouldFetch) {
         const chefs = await fetchData(CHEFS_URL);
-        dispatch(setChefs(chefs));
-        dispatch(setShouldFetchChefs(false));
-        
-        // the following  5  lines of code are temporary workaround for a problem i`m facing
+        // the following  9  lines of code are temporary workaround for a problem i`m facing
+        let tempChefs = [{}];
         let chefOfTheWeekName = "Asaf Granit";
-        let paramToPass = {
-            indexOfChef: selector.chefs.value.findIndex((chef: any) => chef.name === chefOfTheWeekName),
+        if (chefs)
+            tempChefs = chefs;
+        let indexOfChef = tempChefs.findIndex((chef: any) => chef.name === chefOfTheWeekName);
+        let resturants = {
             resturants: selector.resturants.value.filter((resturant: any) => resturant.chef === chefOfTheWeekName)
         };
-        console.log(paramToPass);
-        dispatch(addResturantsForChef(paramToPass));
+        tempChefs[indexOfChef] = _.merge(tempChefs[indexOfChef], resturants);
+        dispatch(setChefs(tempChefs));
+        dispatch(setShouldFetchChefs(false));
 
         // useAddSpecificChefResturants("Asaf Granit")
-    }
 
+    }
     if (selector.dishes.shouldFetch) {
         const dishes = await fetchData(DISHES_URL);
         dispatch(setDishes(dishes));
