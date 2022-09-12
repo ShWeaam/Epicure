@@ -1,21 +1,17 @@
+import SingleChef from 'components/singleChef/SingleChef';
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { ChefsContainer } from './chefsStyle';
 
 export default function Chefs() {
 
   const chefs = useSelector((state: any) => state.chefs.value);
-  const dispatch = useDispatch();
 
   return (
-    <div>
-      <div>
-        {chefs.map((chef: any, key: number) => (
-          <div key={key} style={{ display: "flex", gap: "20px", background: "grey", justifyContent: 'center' }}>
-            <div>{chef.name}</div>
-            <div>{chef.imgUrl}</div>
-          </div>
-        ))}
-      </div>
-    </div>
+    <ChefsContainer>
+      {chefs.map((chef: any, key: number) => (
+        <SingleChef key={key} name={chef.name} img={chef.imgUrl} />
+      ))}
+    </ChefsContainer>
   )
 }

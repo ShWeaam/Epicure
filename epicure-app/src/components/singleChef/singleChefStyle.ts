@@ -9,7 +9,7 @@ export const SingleChefContainer = styled.div`
     position: relative;
 
     @media(min-width: ${MOBILE_TO_DESKTOP_THRESHOLD}px){
-        width: 40%;
+        width: 30%;
     }
 `
 export const ChefImage = styled.img`
