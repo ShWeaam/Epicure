@@ -10,7 +10,7 @@ export default function Logo() {
     const windowSize = SetWindowSize();
     return (
         <Container>
-            <LogoIcon src={windowSize < MOBILE_TO_DESKTOP_THRESHOLD ? smallLogo:bigLogo} />
+            <LogoIcon src={windowSize < MOBILE_TO_DESKTOP_THRESHOLD ? smallLogo : bigLogo} />
         </Container>
     )
 }

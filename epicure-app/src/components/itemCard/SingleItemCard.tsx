@@ -1,4 +1,4 @@
-import { CATEGORY_ICON_PATH } from 'constants/constants';
+import { CATEGORY_ICON_PATH, REDUX_STATES } from 'constants/constants';
 import { MOBILE_TO_DESKTOP_THRESHOLD } from 'constants/styleConsts'
 import SetWindowSize from 'helpers/setWindowSize';
 import { DynamicStar } from 'react-dynamic-star'
@@ -8,9 +8,9 @@ export default function SingleItemCard(props: any) {
 
     const windowSize = SetWindowSize();
     const item = props.item;
-    const resturantsState = () => props.type === "resturants";
-    const chefState = () => props.type === "chefOfTheWeekResturants";
-    const details = item.chef ?? item.ingredients?.join(', ') ?? false;
+    const resturantsState = () => props.type === REDUX_STATES.RESTURANTS;
+    const chefState = () => props.type === REDUX_STATES.CHEF_OF_THE_WEEK_RESTURANTS;
+    const detailsAboutItem = item.chef ?? item.ingredients?.join(', ') ?? false;
     const foodTypeIconPath = item.category ? createIconPath(item.category) : false;
 
     let formatter = new Intl.NumberFormat('en-IL', {
@@ -40,8 +40,8 @@ export default function SingleItemCard(props: any) {
                 <ItemName>
                     {item.name}
                 </ItemName>
-                {details && !chefState() && <ItemDetails >
-                    {details}
+                {detailsAboutItem && !chefState() && <ItemDetails >
+                    {detailsAboutItem}
                 </ItemDetails>}
                 <ItemIconsContainer>
                     {item.rating && resturantsState() && windowSize >= MOBILE_TO_DESKTOP_THRESHOLD &&

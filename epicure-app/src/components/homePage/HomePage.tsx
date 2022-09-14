@@ -1,6 +1,6 @@
 import SetWindowSize from 'helpers/setWindowSize'
 import HeroHomePage from 'components/heroHomePage/HeroHomePage';
-import { RESTURANTS_CONTAINER_TITLE, SIGNATURE_DISH_CONTAINER_TITLE } from 'constants/constants';
+import { APP_URLS, REDUX_STATES, RESTURANTS_CONTAINER_TITLE, SIGNATURE_DISH_CONTAINER_TITLE } from 'constants/constants';
 import ListOfItemCards from 'components/listOfItemCards/ListOfItemCards';
 import ShowMore from '../showMoreBtn/ShowMore';
 import IconsMeaning from 'components/iconsMeaning/IconsMeaning';
@@ -17,10 +17,10 @@ export default function HomePage() {
     return (
         <>
             <HeroHomePage />
-            <ListOfItemCards title={RESTURANTS_CONTAINER_TITLE} requiredState={"resturants"} />
-            <ShowMore linkTo={"resturants"} />
-            <ListOfItemCards title={SIGNATURE_DISH_CONTAINER_TITLE} requiredState={"dishes"} />
-            <ShowMore linkTo={"dishes"} />
+            <ListOfItemCards title={RESTURANTS_CONTAINER_TITLE} requiredState={REDUX_STATES.RESTURANTS} />
+            <ShowMore linkTo={APP_URLS.RESTURANTS} />
+            <ListOfItemCards title={SIGNATURE_DISH_CONTAINER_TITLE} requiredState={REDUX_STATES.DISHES} />
+            <ShowMore linkTo={APP_URLS.DISHES} />
             <ColorBG>
                 <IconsMeaning />
             </ColorBG>

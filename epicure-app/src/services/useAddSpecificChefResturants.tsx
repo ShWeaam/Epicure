@@ -1,5 +1,4 @@
 import { addResturantsForChef } from 'components/chefs/chefsSlicer';
-import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
 export default function useAddSpecificChefResturants(chefOfTheWeekName: any) {

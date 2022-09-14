@@ -5,6 +5,7 @@ import SetWindowSize from "helpers/setWindowSize";
 import checkLegalPropsAndInRange from "helpers/checkLegalPropsAndInRange";
 import { ItemsContainer } from "./itemsCardsStyle";
 import SingleItemCard from "components/itemCard/SingleItemCard";
+import { REDUX_STATES } from "constants/constants";
 
 interface Props {
     requiredState?: string,
@@ -16,12 +17,15 @@ export default function ItemsCardstWithSlider(props: Props) {
     const windowSize = SetWindowSize();
     const itemsList = useSelector((state: any) => {
         switch (props.requiredState) {
-            case "resturants":
+            case REDUX_STATES.RESTURANTS:
                 return state.resturants.value;
-            case "chefOfTheWeekResturants":
+
+            case REDUX_STATES.CHEF_OF_THE_WEEK_RESTURANTS:
                 return state.chefs.chefOfTheWeek.resturants;
-            case "dishes":
+
+            case REDUX_STATES.DISHES:
                 return state.dishes.value;
+
             default:
                 return undefined
         }

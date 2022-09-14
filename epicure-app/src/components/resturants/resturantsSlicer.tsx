@@ -1,8 +1,9 @@
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { REDUX_STATES } from 'constants/constants';
 // import type { RootState } from 'store'
 
 export const resturantsSlice = createSlice({
-  name: 'resturants',
+  name: REDUX_STATES.RESTURANTS,
   initialState: {
     value: [],
     shouldFetch: true

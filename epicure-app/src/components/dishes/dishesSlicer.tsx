@@ -1,8 +1,9 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
+import { REDUX_STATES } from 'constants/constants';
 
 export const dishesSlice = createSlice({
 
-  name: 'dishes',
+  name: REDUX_STATES.DISHES,
 
   initialState: {
     value: [],

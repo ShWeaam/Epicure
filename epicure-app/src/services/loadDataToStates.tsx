@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { addResturantsForChef, setChefOfTheWeek, setChefs, setShouldFetchChefs } from "../components/chefs/chefsSlicer";
 import { setDishes, setShouldFetchDishes } from "../components/dishes/dishesSlicer";
 import { resturantsSlice, setResturants, setShouldFetchResturants } from "../components/resturants/resturantsSlicer";
-import { CHEFS_URL, DATA_TO_GET_FROM_API, DISHES_URL, RESTURANTS_URL } from "../constants/constants";
+import { API_ROUTES, DATA_TO_GET_FROM_API, } from "../constants/constants";
 import { fetchData } from "./fetchData";
 import _ from "lodash";
 
@@ -12,13 +12,13 @@ export async function useFetchAndLoadDataToStates() {
     const dispatch = useDispatch();
 
     if (selector.resturants.shouldFetch) {
-        const resturants = await fetchData(RESTURANTS_URL);
+        const resturants = await fetchData(API_ROUTES.GET_RESTURANTS);
         dispatch(setResturants(resturants));
         dispatch(setShouldFetchResturants(false));
     }
 
     if (selector.chefs.shouldFetch) {
-        const chefs = await fetchData(CHEFS_URL);
+        const chefs = await fetchData(API_ROUTES.GET_CHEFS);
         // the following  10  lines of code are temporary workaround for a problem i`m facing
         let tempChefs = [{}];
         let chefOfTheWeekName = "Asaf Granit";
@@ -36,7 +36,7 @@ export async function useFetchAndLoadDataToStates() {
 
     }
     if (selector.dishes.shouldFetch) {
-        const dishes = await fetchData(DISHES_URL);
+        const dishes = await fetchData(API_ROUTES.GET_DISHES);
         dispatch(setDishes(dishes));
         dispatch(setShouldFetchDishes(false));
     }

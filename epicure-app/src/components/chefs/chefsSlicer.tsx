@@ -1,8 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit'
+import { REDUX_STATES } from 'constants/constants';
 import _ from "lodash";
 
 export const chefsSlice = createSlice({
-  name: 'chefs',
+  name: REDUX_STATES.CHEFS,
 
   initialState: {
     value: [],
@@ -26,7 +27,7 @@ export const chefsSlice = createSlice({
     addResturantsForChef: (state, action) => {
       let indexOfChef = action.payload.indexOfChef;
       let resturants = action.payload.resturants;
-      state.value[indexOfChef] = _.merge(state.value[indexOfChef], {resturants});
+      state.value[indexOfChef] = _.merge(state.value[indexOfChef], { resturants });
     },
 
     setChefOfTheWeek: (state, action) => {

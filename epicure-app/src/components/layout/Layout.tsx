@@ -1,4 +1,5 @@
 import Footer from 'components/footer/Footer'
+import { APP_URLS } from 'constants/constants'
 import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Chefs from '../chefs/Chefs'
@@ -15,10 +16,10 @@ export default function Layout() {
       <Header />
 
       <Routes>
-        <Route path='' element={<HomePage />} />
-        <Route path='resturants' element={<Resturants/>} />
-        <Route path='chefs' element={<Chefs />} />
-        <Route path='dishes' element={<Dishes />} />
+        <Route path={APP_URLS.HOME} element={<HomePage />} />
+        <Route path={APP_URLS.RESTURANTS} element={<Resturants />} />
+        <Route path={APP_URLS.CHEFS} element={<Chefs />} />
+        <Route path={APP_URLS.DISHES} element={<Dishes />} />
         {/* <Route path='contactUs' element={<Dishes />} /> */}
         {/* <Route path='termsOfUse' element={<Dishes />} /> */}
         {/* <Route path='PrivacyPolicy' element={<Dishes />} /> */}

@@ -1,30 +1,22 @@
-import HomePage from 'components/homePage/HomePage';
-import { HOME_PATH } from 'constants/constants';
+import { APP_URLS, CARDS_TO_SHOW } from 'constants/constants';
 import { MOBILE_TO_DESKTOP_THRESHOLD } from 'constants/styleConsts';
-import React, { useEffect, useState } from 'react'
-import { useLocation } from 'react-router-dom'
 import SetWindowSize from './setWindowSize';
 import ItemsList from 'components/itemsCards/ItemsCards';
 import ItemsListWithSlider from 'components/itemsCards/ItemsCardsWithSlider';
 
 
-export default function getNeededComponentWithParams(locationRecieved: any) {
+export default function getNeededComponentWithParams(recievedLocation: any) {
     const windowSize = SetWindowSize();
     let ComponentToShow;
-    let cardsToShow: number | string = "";
-    let location = locationRecieved;
+    let cardsToShow: number | string = CARDS_TO_SHOW.all;
 
-    if (location.pathname !== HOME_PATH) {
+    if (recievedLocation.pathname !== APP_URLS.HOME)
         ComponentToShow = ItemsList;
-        cardsToShow = "all";
-    }
-    else if (windowSize < MOBILE_TO_DESKTOP_THRESHOLD) {
+    else if (windowSize < MOBILE_TO_DESKTOP_THRESHOLD)
         ComponentToShow = ItemsListWithSlider;
-        cardsToShow = "all";
-    }
     else {
         ComponentToShow = ItemsList;
-        cardsToShow = 3;
+        cardsToShow = CARDS_TO_SHOW.three;
     }
 
     return { ComponentToShow, cardsToShow };
