@@ -1,10 +1,11 @@
-const mongoose = require("mongoose");
+import { Schema, model } from "mongoose";
 
-const schema = new mongoose.Schema({
+const schema = new Schema({
     name: {
         type: String,
         require: true,
-        maxlength: 50
+        maxlength: 50,
+        trim: true
     },
     price: {
         type: Number,
@@ -14,17 +15,25 @@ const schema = new mongoose.Schema({
     category: {
         type: String,
         require: true,
-        maxlength: 20
+        maxlength: 20,
+        trim: true,
+        validate: (value) => {
+            if (!foodCategories.exists({ name: value })) {
+                throw new Error("Food category not found in DB");
+            }
+        }
     },
     resturant: {
         type: String,
         require: true,
-        maxlength: 50
+        maxlength: 50,
+        trim: true
     },
     mealType: {
         type: String,
         require: true,
-        maxlength: 20
+        maxlength: 20,
+        trim: true
     },
     ingredients: {
         type: Array,
@@ -41,7 +50,8 @@ const schema = new mongoose.Schema({
     imgUrl: {
         type: String,
         require: false,
-        default: ""
+        default: "", 
+        trim: true
     },
     isSignatureDish: {
         type: Boolean,
@@ -50,6 +60,6 @@ const schema = new mongoose.Schema({
     }
 });
 
-const Dish = mongoose.model("Dish", schema);
+const Dish = model("Dish", schema);
 
-module.exports = Dish;
+export default Dish;

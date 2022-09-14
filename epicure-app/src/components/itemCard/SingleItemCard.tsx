@@ -34,7 +34,7 @@ export default function SingleItemCard(props: any) {
     return (
         <Item key={item._id} >
             <ItemImgContainer>
-                <ItemImg src={item.imgUrl} />
+                <ItemImg src={item.imgUrl} loading="lazy" />
             </ItemImgContainer>
             <ItemDescription isResturant={resturantsState()} isChefOfTheWeek={chefState()}>
                 <ItemName>

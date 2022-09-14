@@ -1,15 +1,17 @@
-const mongoose = require("mongoose");
+import { Schema, model } from "mongoose";
 
-const schema = new mongoose.Schema({
+const schema = new Schema({
     name: {
         type: String,
         require: true,
-        maxlength: 50
+        maxlength: 50, 
+        trim: true
     },
     chef: {
         type: String,
         require: true,
-        maxlength: 50
+        maxlength: 50, 
+        trim: true
     },
     rating: {
         type: Number,
@@ -29,12 +31,14 @@ const schema = new mongoose.Schema({
     imgUrl: {
         type: String,
         require: false,
-        default: ""
+        default: "", 
+        trim: true
     },
     bigImgUrl: {
         type: String,
         require: false,
-        default: ""
+        default: "", 
+        trim: true
     },
     dateJoined: { 
         type: Date, 
@@ -48,6 +52,6 @@ const schema = new mongoose.Schema({
     }
 });
 
-const Resturant = mongoose.model("Resturant", schema);
+const Resturant = model("Resturant", schema);
 
-module.exports = Resturant;
+export default Resturant;

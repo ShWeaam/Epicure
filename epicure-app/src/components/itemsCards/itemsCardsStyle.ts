@@ -6,6 +6,7 @@ export const ItemsContainer = styled.div<{ directionRow?: boolean }>`
     width: 100%;
     align-items: flex-start;
     flex-direction: ${props => props.directionRow === true ? "row" : "column"};
+    row-gap: 3vw;
 
     @media(min-width: ${MOBILE_TO_DESKTOP_THRESHOLD}px){
         flex-direction: row;

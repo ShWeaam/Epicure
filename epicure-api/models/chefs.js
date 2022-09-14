@@ -1,15 +1,17 @@
-const mongoose = require("mongoose");
+import { Schema, model } from "mongoose";
 
-const schema = new mongoose.Schema({
+const schema = new Schema({
     name: {
         type: String,
         require: true,
-        maxlength: 50
+        maxlength: 50,
+        trim: true
     },
     imgUrl: {
         type: String,
         require: false,
-        default: ""
+        default: "",
+        trim: true
     },
     views: {
         type: Number,
@@ -23,6 +25,6 @@ const schema = new mongoose.Schema({
     }
 });
 
-const Chef = mongoose.model("Chef", schema);
+const Chef = model("Chef", schema);
 
-module.exports = Chef;
+export default Chef;
