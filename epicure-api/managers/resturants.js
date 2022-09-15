@@ -1,6 +1,6 @@
-const Resturant = require('../models/resturants')
+import Resturant from '../models/resturants.js';
 
-const Manager = {
+const ResturantManager = {
 
     getAllResturants: async () => {
         const resturants = await Resturant.find();
@@ -34,4 +34,4 @@ const Manager = {
     }
 };
 
-module.exports = Manager;
+export default ResturantManager;

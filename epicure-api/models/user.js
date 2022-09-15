@@ -1,7 +1,7 @@
-import { Schema, model } from "mongoose";
+import mongoose from "mongoose";
 import { isEmail, isAlpha } from 'validator';
 
-const schema = new Schema({
+const schema = new mongoose.Schema({
     firstName: {
         type: String,
         require: true,
@@ -44,13 +44,13 @@ const schema = new Schema({
         require: true,
         default: Date.now()
     },
-    addresses:{
+    addresses: {
         type: Array,
         default: [],
         required: false
-      }
+    }
 });
 
-const User = model("User", schema);
+const User = mongoose.model("User", schema);
 
 export default User;

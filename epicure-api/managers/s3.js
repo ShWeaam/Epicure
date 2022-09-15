@@ -1,13 +1,13 @@
-const AWS = require('aws-sdk');
-const uuid = require('uuid').v4;
-const path = require('path');
-require('dotenv').config();
-
+import { S3 } from 'aws-sdk';
+import { v4 as uuid } from 'uuid';
+import { extname } from 'path';
+import * as dotenv from 'dotenv'
+dotenv.config()
 
 // this file manages the connection with the S3 bucket on AWS
 
 // get the connection credentials from the env file
-const s3 = new AWS.S3({
+const s3 = new S3({
     accessKeyId: process.env.AWS_ACCESS_KEY_ID,
     secretAccessKey: process.env.AWS_SECRET_ACCESS,
     region: process.env.AWS_REGION
@@ -16,7 +16,7 @@ const s3 = new AWS.S3({
 const Manager = {
     // upload file to S3
     uploadFile: (file, callback) => {
-        const ext = path.extname(file.name);
+        const ext = extname(file.name);
         const key = `${uuid()}${ext}`;
         const params = {
             Bucket: process.env.AWS_BUCKET,
@@ -53,4 +53,4 @@ const Manager = {
     }
 };
 
-module.exports = Manager;
+export default Manager;

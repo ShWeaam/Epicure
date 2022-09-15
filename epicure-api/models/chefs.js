@@ -1,6 +1,6 @@
-import { Schema, model } from "mongoose";
+import mongoose from 'mongoose';
 
-const schema = new Schema({
+const schema = new mongoose.Schema({
     name: {
         type: String,
         require: true,
@@ -22,9 +22,9 @@ const schema = new Schema({
         type: Date,
         require: true,
         default: Date.now()
-    }
+    },
 });
 
-const Chef = model("Chef", schema);
+const Chef = mongoose.model("Chef", schema);
 
 export default Chef;

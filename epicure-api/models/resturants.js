@@ -1,16 +1,16 @@
-import { Schema, model } from "mongoose";
+import mongoose from 'mongoose';
 
-const schema = new Schema({
+const schema = new mongoose.Schema({
     name: {
         type: String,
         require: true,
-        maxlength: 50, 
+        maxlength: 50,
         trim: true
     },
     chef: {
         type: String,
         require: true,
-        maxlength: 50, 
+        maxlength: 50,
         trim: true
     },
     rating: {
@@ -31,27 +31,27 @@ const schema = new Schema({
     imgUrl: {
         type: String,
         require: false,
-        default: "", 
+        default: "",
         trim: true
     },
     bigImgUrl: {
         type: String,
         require: false,
-        default: "", 
+        default: "",
         trim: true
     },
-    dateJoined: { 
-        type: Date, 
-        require: true, 
-        default: Date.now() 
+    dateJoined: {
+        type: Date,
+        require: true,
+        default: Date.now()
     },
-    views: { 
-        type: Number, 
-        required: true, 
-        default: 0 
+    views: {
+        type: Number,
+        required: true,
+        default: 0
     }
 });
 
-const Resturant = model("Resturant", schema);
+const Resturant = mongoose.model("Resturant", schema);
 
 export default Resturant;

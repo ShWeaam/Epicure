@@ -1,6 +1,6 @@
-const Dish = require('../models/dishes')
+import Dish from '../models/dishes.js';
 
-const Manager = {
+const DishesManager = {
 
     getAllDishes: async () => {
         const dishes = await Dish.find();
@@ -39,4 +39,4 @@ const Manager = {
     }
 };
 
-module.exports = Manager;
+export default DishesManager;

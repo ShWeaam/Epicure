@@ -1,6 +1,8 @@
-import { Schema, model } from "mongoose";
+//import { Schema, model } from "mongoose";
 
-const schema = new Schema({
+import mongoose from 'mongoose';
+
+const schema = new mongoose.Schema({
     name: {
         type: String,
         require: true,
@@ -50,7 +52,7 @@ const schema = new Schema({
     imgUrl: {
         type: String,
         require: false,
-        default: "", 
+        default: "",
         trim: true
     },
     isSignatureDish: {
@@ -60,6 +62,6 @@ const schema = new Schema({
     }
 });
 
-const Dish = model("Dish", schema);
+const Dish = mongoose.model("Dish", schema);
 
 export default Dish;

@@ -1,6 +1,6 @@
-const Chef = require('../models/chefs');
+import Chef from '../models/chefs.js';
 
-const Manager = {
+const ChefsManager = {
 
     getAllChefs: async () => {
         const chefs = await Chef.find();
@@ -29,4 +29,4 @@ const Manager = {
     }
 };
 
-module.exports = Manager;
+export default ChefsManager;

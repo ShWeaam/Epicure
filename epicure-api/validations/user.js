@@ -1,5 +1,6 @@
 import Joi, { objectId, object, string } from "joi";
-objectId = require('joi-objectid')(Joi);
+//objectId = require('joi-objectid')(Joi);
+import Joi from "joi";
 
 export function signup(data) {
     return object({

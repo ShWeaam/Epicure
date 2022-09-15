@@ -1,7 +1,10 @@
-const router = require('express').Router();
-const chefsManager = require('../managers/chefs');
+//const router = require('express').Router();
+import express from 'express';
+import chefsManager from '../managers/chefs.js';
 
-router.get(`/`, async (req, res) => {
+const chefsRouter = express.Router();
+
+chefsRouter.get(`/`, async (req, res) => {
     try {
         const chefs = await chefsManager.getAllChefs();
         return res.status(200).send(chefs);
@@ -10,5 +13,5 @@ router.get(`/`, async (req, res) => {
     }
 });
 
-
-module.exports = router;
+// module.exports = Router;
+export default chefsRouter;
