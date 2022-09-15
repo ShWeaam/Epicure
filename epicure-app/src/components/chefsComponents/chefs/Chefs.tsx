@@ -1,4 +1,4 @@
-import SingleChef from 'components/singleChef/SingleChef';
+import SingleChef from 'components/chefsComponents/singleChef/SingleChef';
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { ChefsContainer } from './chefsStyle';

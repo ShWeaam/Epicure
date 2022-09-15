@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { addResturantsForChef, setChefOfTheWeek, setChefs, setShouldFetchChefs } from "../components/chefs/chefsSlicer";
+import { addResturantsForChef, setChefOfTheWeek, setChefs, setShouldFetchChefs } from "../components/chefsComponents/chefs/chefsSlicer";
 import { setDishes, setShouldFetchDishes } from "../components/dishes/dishesSlicer";
 import { resturantsSlice, setResturants, setShouldFetchResturants } from "../components/resturants/resturantsSlicer";
 import { API_ROUTES, DATA_TO_GET_FROM_API, } from "../constants/constants";

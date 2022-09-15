@@ -1,4 +1,4 @@
-import ListOfItemCards from 'components/listOfItemCards/ListOfItemCards';
+import ListOfItemCards from 'components/itemCardsComponents/listOfItemCards/ListOfItemCards';
 import { REDUX_STATES } from 'constants/constants';
 
 export default function Resturants() {

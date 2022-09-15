@@ -1,8 +1,8 @@
 import { APP_URLS, CARDS_TO_SHOW } from 'constants/constants';
 import { MOBILE_TO_DESKTOP_THRESHOLD } from 'constants/styleConsts';
 import SetWindowSize from './setWindowSize';
-import ItemsList from 'components/itemsCards/ItemsCards';
-import ItemsListWithSlider from 'components/itemsCards/ItemsCardsWithSlider';
+import ItemsList from 'components/itemCardsComponents/itemsCards/ItemsCards';
+import ItemsListWithSlider from 'components/itemCardsComponents/itemsCards/ItemsCardsWithSlider';
 
 
 export default function getNeededComponentWithParams(recievedLocation: any) {

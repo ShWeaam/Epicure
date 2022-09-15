@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import checkLegalPropsAndInRange from 'helpers/checkLegalPropsAndInRange';
 import { ItemsContainer } from './itemsCardsStyle';
-import SingleItemCard from 'components/itemCard/SingleItemCard';
+import SingleItemCard from 'components/itemCardsComponents/itemCard/SingleItemCard';
 import { REDUX_STATES } from 'constants/constants';
 
 interface Props {

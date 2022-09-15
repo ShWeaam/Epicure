@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import chefsReducer from './components/chefs/chefsSlicer';
+import chefsReducer from './components/chefsComponents/chefs/chefsSlicer';
 import dishesReducer from './components/dishes/dishesSlicer';
 import resturantsReducer from './components/resturants/resturantsSlicer';
 import menuModalSlicer from 'components/headerComponents/headerModals/menuModal/menuModalSlicer';

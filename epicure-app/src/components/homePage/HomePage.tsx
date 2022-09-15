@@ -1,14 +1,14 @@
 import SetWindowSize from 'helpers/setWindowSize'
 import HeroHomePage from 'components/heroHomePage/HeroHomePage';
 import { APP_URLS, REDUX_STATES, RESTURANTS_CONTAINER_TITLE, SIGNATURE_DISH_CONTAINER_TITLE } from 'constants/constants';
-import ListOfItemCards from 'components/listOfItemCards/ListOfItemCards';
-import ShowMore from '../showMoreBtn/ShowMore';
+import ListOfItemCards from 'components/itemCardsComponents/listOfItemCards/ListOfItemCards';
+import ShowMore from '../itemCardsComponents/showMoreBtn/ShowMore';
 import IconsMeaning from 'components/iconsMeaning/IconsMeaning';
-import AboutUs from 'components/aboutUs/AboutUs';
+import AboutUs from 'components/about/AboutUs';
 import Download from 'components/downloadFrom/Download';
 import { ColorBG, Container, SubContainer } from './HomePageStyle';
 import Logo from 'components/logo/Logo';
-import ChefOfTheWeek from 'components/chefOfTheWeek/ChefOfTheWeek';
+import ChefOfTheWeek from 'components/chefsComponents/chefOfTheWeek/ChefOfTheWeek';
 
 
 export default function HomePage() {
