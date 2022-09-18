@@ -34,12 +34,6 @@ const schema = new mongoose.Schema({
         default: "",
         trim: true
     },
-    bigImgUrl: {
-        type: String,
-        require: false,
-        default: "",
-        trim: true
-    },
     dateJoined: {
         type: Date,
         require: true,
@@ -49,6 +43,11 @@ const schema = new mongoose.Schema({
         type: Number,
         required: true,
         default: 0
+    },
+    orders: {
+        type: Number,
+        required: true,
+        default: 0,
     }
 });
 

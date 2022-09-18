@@ -1,4 +1,4 @@
-import { S3 } from 'aws-sdk';
+import AWS from 'aws-sdk';
 import { v4 as uuid } from 'uuid';
 import { extname } from 'path';
 import * as dotenv from 'dotenv'
@@ -7,13 +7,13 @@ dotenv.config()
 // this file manages the connection with the S3 bucket on AWS
 
 // get the connection credentials from the env file
-const s3 = new S3({
+const s3 = new AWS.S3({
     accessKeyId: process.env.AWS_ACCESS_KEY_ID,
     secretAccessKey: process.env.AWS_SECRET_ACCESS,
     region: process.env.AWS_REGION
 });
 
-const Manager = {
+const s3Manager = {
     // upload file to S3
     uploadFile: (file, callback) => {
         const ext = extname(file.name);
@@ -53,4 +53,4 @@ const Manager = {
     }
 };
 
-export default Manager;
+export default s3Manager;
