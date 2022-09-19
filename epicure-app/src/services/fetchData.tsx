@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from "axios"
-import { REACT_API_URL } from "../constants/constants";
+import { REACT_API_URL } from "../constants/apiRoutes";
 
 export async function fetchData(apiFetchingRoute: string) {
     

@@ -1,6 +1,4 @@
 export const APP_NAME = "Epicure"
-export const REACT_API_URL = "http://localhost:4000/"
-export const DATA_TO_GET_FROM_API = ["chefs", "resturants", "dishes"]
 export const HOME_PG_SENTENCE = "Epicure works with the top chef resturants in Tel Aviv"
 export const RESTURANTS_CONTAINER_TITLE = "Popular Resturants in " + APP_NAME
 export const CHEF_OF_THE_WEEK_TITLE = "chef of the week"
@@ -16,12 +14,6 @@ export const APP_URLS = {
     RESTURANTS: "resturants",
     CHEFS: "chefs",
     DISHES: "dishes",
-}
-
-export const API_ROUTES = {
-    GET_RESTURANTS: "resturants",
-    GET_CHEFS: "chefs",
-    GET_DISHES: "dishes",
 }
 
 export const CARDS_TO_SHOW = {
