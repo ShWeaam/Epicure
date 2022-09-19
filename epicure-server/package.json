@@ -6,7 +6,7 @@
   "module": "noe16",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node dist/app.ts",
+    "start": "node dist/main.js",
     "build": "tsc"
   },
   "author": "",
