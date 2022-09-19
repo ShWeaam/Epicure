@@ -8,7 +8,7 @@ import { fileURLToPath } from 'url';
 import { exit } from "process";
 
 const app = express();
-const port = process.env.PORT;
+const port = process.env.PORT || 4000;
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 app.use(cors());
