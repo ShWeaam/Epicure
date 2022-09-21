@@ -46,9 +46,9 @@ export const ItemName = styled.h3`
     line-height: 200%;
     padding: 0px;
     margin: 0px;
-    font-weight: 800;
+    font-weight: normal;
     font-size:${MOBILE_TEXT_SIZE.h3};
-    letter-spacing: 3px;
+    letter-spacing: 2.67px;
     @media(min-width: ${MOBILE_TO_DESKTOP_THRESHOLD}px){
         font-size:${DESKTOP_TEXT_SIZE.h3};
     }

@@ -1,4 +1,4 @@
-import { DESKTOP_TEXT_SIZE, MOBILE_TEXT_SIZE, MOBILE_TO_DESKTOP_THRESHOLD } from "constants/styleConsts"
+import { DESKTOP_TEXT_SIZE, FONT, MOBILE_TEXT_SIZE, MOBILE_TO_DESKTOP_THRESHOLD } from "constants/styleConsts"
 import { Link } from "react-router-dom"
 import styled from "styled-components"
 
@@ -8,7 +8,7 @@ export const ButtonsContainer = styled.div`
     align-items:start;
     margin-top:40px;
     flex-direction:column;
-    margin-bottom: 5%;
+    margin-bottom: 8%;
     @media (min-width: ${MOBILE_TO_DESKTOP_THRESHOLD}px){
         width:clamp(350px,36%,450px);
         margin:auto;
@@ -35,8 +35,8 @@ export const CustomLink = styled(Link)`
     padding: 0;
     font-size:${MOBILE_TEXT_SIZE.footerLinks};
     gap:7px;
-    font-family:inherit;
-    font-weight:inherit;
+    font-family:${FONT};
+    font-weight:200;
 
     @media(min-width: ${MOBILE_TO_DESKTOP_THRESHOLD}px){
         gap:10px;

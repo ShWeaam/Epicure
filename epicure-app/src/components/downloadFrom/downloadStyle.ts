@@ -7,9 +7,10 @@ export const Container = styled.div`
     flex-direction: column;
     justify-content: space-between;
     font-size: ${MOBILE_TEXT_SIZE.label};
-    gap:15px;
-
+    gap:16px;
+    
     @media(min-width: ${MOBILE_TO_DESKTOP_THRESHOLD}px){
+        margin-bottom: 5%;
         flex-direction: row;
         justify-content: start;
         flex-direction: row-reverse;

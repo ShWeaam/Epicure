@@ -25,9 +25,9 @@ export const NameContainer = styled.div`
     align-items: center; 
     position: absolute;
     bottom: 0;
-    font-weight: 900;
+    font-weight: normal;
     height: 50px;
-    letter-spacing: 3px;
+    letter-spacing: 2.67px;
     font-size: ${MOBILE_TEXT_SIZE.h3};
     @media(min-width: ${MOBILE_TO_DESKTOP_THRESHOLD}px){
         font-size: ${DESKTOP_TEXT_SIZE.h3};

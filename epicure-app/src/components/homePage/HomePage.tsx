@@ -4,16 +4,12 @@ import { APP_URLS, REDUX_STATES, RESTURANTS_CONTAINER_TITLE, SIGNATURE_DISH_CONT
 import ListOfItemCards from 'components/itemCardsComponents/listOfItemCards/ListOfItemCards';
 import ShowMore from '../itemCardsComponents/showMoreBtn/ShowMore';
 import IconsMeaning from 'components/iconsMeaning/IconsMeaning';
-import AboutUs from 'components/about/AboutUs';
-import Download from 'components/downloadFrom/Download';
-import { ColorBG, Container, SubContainer } from './HomePageStyle';
-import Logo from 'components/logo/Logo';
+import { ColorBG } from './HomePageStyle';
 import ChefOfTheWeek from 'components/chefsComponents/chefOfTheWeek/ChefOfTheWeek';
+import AboutUsHomeSection from 'components/homePageAboutUsComponents/AboutUsHomeSection';
 
 
 export default function HomePage() {
-    const windowSize = SetWindowSize();
-
     return (
         <>
             <HeroHomePage />
@@ -26,15 +22,8 @@ export default function HomePage() {
             </ColorBG>
             <ChefOfTheWeek />
             <ColorBG>
-                <Container>
-                    <SubContainer>
-                        <AboutUs />
-                    </SubContainer>
-                    <Logo />
-                    <Download />
-                </Container>
+                <AboutUsHomeSection />
             </ColorBG>
-
         </>
     )
 }

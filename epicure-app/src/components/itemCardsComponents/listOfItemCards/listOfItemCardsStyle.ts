@@ -16,7 +16,10 @@ export const Container = styled.div`
 
 export const ContainerTitle = styled.h2`
     font-size:${MOBILE_TEXT_SIZE.h2};
+    font-weight: inherit;
+    letter-spacing: 1.25px;
     display: flex;
+    /* text-transform: uppercase; */
     align-self: flex-start;
     justify-content: center;
     @media(min-width: ${MOBILE_TO_DESKTOP_THRESHOLD}px){

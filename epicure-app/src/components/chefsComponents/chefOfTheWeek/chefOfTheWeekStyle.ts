@@ -14,7 +14,6 @@ export const Container = styled.div`
         flex-direction: row;
         flex-wrap: wrap;
         margin: auto;
-        justify-content: space-between;
     }
 `
 
@@ -24,6 +23,8 @@ export const ContainerTitle = styled.h2`
     align-self: flex-start;
     justify-content: center;
     line-height: 200%;
+    font-weight: lighter;
+    letter-spacing: 1.25px;
     @media(min-width: ${MOBILE_TO_DESKTOP_THRESHOLD}px){
         align-self: center;
         font-size:${DESKTOP_TEXT_SIZE.h2};
@@ -33,18 +34,21 @@ export const ContainerTitle = styled.h2`
 
 export const TextContainer = styled.div`
     width: 100%;
-    font-size: ${MOBILE_TEXT_SIZE.chefOfTheWeekText};
     text-align: justify;
     text-justify: inter-word;
     @media(min-width: ${MOBILE_TO_DESKTOP_THRESHOLD}px){
-        width: 45%;
+        width: 55%;
         font-size: ${DESKTOP_TEXT_SIZE.chefOfTheWeekText};
         }
 `
 
 export const Text = styled.p`
-line-height: 150%;
-letter-spacing: 1.3px;
+    font-size: ${MOBILE_TEXT_SIZE.chefOfTheWeekText};
+    line-height: 150%;
+    letter-spacing: 1.25px;
+    @media(min-width: ${MOBILE_TO_DESKTOP_THRESHOLD}px){
+        font-size: ${DESKTOP_TEXT_SIZE.chefOfTheWeekText};
+        }
 `
 
 export const ChefResturants = styled.div`

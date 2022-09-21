@@ -9,6 +9,7 @@ export const Container = styled.div`
 `
 
 export const Title = styled.h2`
+font-weight: lighter;
     font-size: ${MOBILE_TEXT_SIZE.h2};
     @media(min-width: ${MOBILE_TO_DESKTOP_THRESHOLD}px){
         font-size: ${DESKTOP_TEXT_SIZE.h2};
@@ -16,12 +17,12 @@ export const Title = styled.h2`
 `
 
 export const Paragraph = styled.p`
-    font-size: ${MOBILE_TEXT_SIZE.body};
+    font-size: ${MOBILE_TEXT_SIZE.aboutUs};
+    letter-spacing: 2.14px;
+    line-height: 155%;
     @media(min-width: ${MOBILE_TO_DESKTOP_THRESHOLD}px){
+        font-size: ${DESKTOP_TEXT_SIZE.aboutUs};
+        line-height: 150%;
         width: 75%;
     }
-
-@media(min-width: ${MOBILE_TO_DESKTOP_THRESHOLD}px){
-    font-size: ${DESKTOP_TEXT_SIZE.body};
-}
 `

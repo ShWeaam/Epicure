@@ -8,7 +8,9 @@ export default function HeroHomePage() {
             <TransparentContainer>
                 <HeaderFrame>
                     <MainHeader>
-                        {HOME_PG_SENTENCE}
+                        {HOME_PG_SENTENCE.line1}
+                        {<br />}
+                        {HOME_PG_SENTENCE.line2}
                     </MainHeader>
                 </HeaderFrame>
                 <SearchBar />

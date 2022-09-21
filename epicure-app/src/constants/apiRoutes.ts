@@ -1,4 +1,4 @@
-export const REACT_API_URL = "http://localhost:4000"
+export const REACT_API_URL = "https://epicure-server.herokuapp.com"
 export const DATA_TO_GET_FROM_API = ["chefs", "resturants", "dishes"]
 
 export const API_MAIN_ROUTES = {

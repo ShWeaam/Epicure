@@ -2,9 +2,9 @@ import getNeededComponentWithParams from 'helpers/getNeededComponentWithParams'
 import { useLocation } from 'react-router-dom'
 import { Container, ContainerTitle } from './listOfItemCardsStyle';
 
-interface Props{
-  title?:string,
-  requiredState:string,
+interface Props {
+  title?: string,
+  requiredState: string,
 
 }
 
@@ -20,7 +20,7 @@ export default function ListOfItemCards(props: Props) {
   return (
     <Container>
       {props.title && <ContainerTitle>
-        {props.title.toUpperCase()}
+        {props.title.toUpperCase() + ":"}
       </ContainerTitle>
       }
       <DynamicComponentTypeForItemsList {...componentParams} />

@@ -13,12 +13,14 @@ export const Container = styled.div`
 `
 
 export const ContainerHeader = styled.h2`
-    font-size: ${MOBILE_TEXT_SIZE.h2};
+    font-size: ${MOBILE_TEXT_SIZE.iconMeaning};
+    font-weight: lighter;
     line-height: 200%;
+    letter-spacing: 1.25px;
     
     @media(min-width: ${MOBILE_TO_DESKTOP_THRESHOLD}px){
-        letter-spacing: 5px;
-        font-size: ${DESKTOP_TEXT_SIZE.h2};
+        letter-spacing: 2.14x;
+        font-size: ${DESKTOP_TEXT_SIZE.iconMeaning};
     }
 `
 

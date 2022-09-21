@@ -7,7 +7,6 @@ export const AppDiv = styled.div<{ windowSize: number }>`
     font-size: ${MOBILE_TEXT_SIZE.body};
     color: ${FONT_COLOR};
     background-color: ${BG_COLOR};
-    /* background-color:red; */
     font-weight: ${FONT_WEIGHT};
     letter-spacing: ${LETTER_SPACING};
     margin:auto;

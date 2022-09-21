@@ -22,7 +22,7 @@ export default function ChefOfTheWeek() {
     return (
         <Container>
             <ContainerTitle>
-                {CHEF_OF_THE_WEEK_TITLE.toUpperCase()}
+                {CHEF_OF_THE_WEEK_TITLE.toUpperCase() + ":"}
             </ContainerTitle>
             <SingleChef name={chef.name} img={chef.imgUrl} />
             <TextContainer>

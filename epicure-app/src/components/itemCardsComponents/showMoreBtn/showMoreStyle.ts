@@ -4,12 +4,14 @@ import styled from "styled-components";
 
 export const FullWidthContainer = styled.div`
     display:flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     width:${MOBILE_WIDTH};
     box-sizing: border-box;
     align-items: center;
     margin-bottom: 35px;
+    letter-spacing: 2px;
     @media(min-width: ${MOBILE_TO_DESKTOP_THRESHOLD}px){
+        justify-content: flex-end;
         width:90%;
         margin: auto;
         margin-bottom: 50px;
@@ -22,6 +24,7 @@ export const CustomLink = styled(Link)`
     color: inherit;
     padding: 0;
     font-size: ${MOBILE_TEXT_SIZE.body};
+    font-weight: normal;
     gap:7px;
 
     @media(min-width: ${MOBILE_TO_DESKTOP_THRESHOLD}px){
@@ -31,7 +34,13 @@ export const CustomLink = styled(Link)`
 `
 
 export const IconContainer = styled.div`
-    max-width: 20px;
+    display: flex;
+    max-width: 22px;
+    @media(min-width: ${MOBILE_TO_DESKTOP_THRESHOLD}px){
+        max-width: 22px;
+        align-items: center;
+
+    }
 `
 
 export const Icon = styled.img`

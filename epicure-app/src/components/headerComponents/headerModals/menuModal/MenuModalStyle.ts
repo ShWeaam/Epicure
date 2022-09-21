@@ -31,6 +31,7 @@ export const ModalHeader = styled.div`
 export const Close = styled.div`
     display:flex;
     align-items:center;
+    cursor: pointer;
 `
 
 export const XIcon = styled.img`
