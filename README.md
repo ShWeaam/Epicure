@@ -1,13 +1,16 @@
 # Epicure
-My Full Stack bootcamp project - building a food orders website using MERN stack
-Responsive web application for orders from top restaurants in Tel Aviv. 
-The application is based on a real product and includes standard features relevant for the industry.
-the code is deployed on heroku
-https://epicure-app.herokuapp.com/
+  My Full Stack bootcamp project - building a food orders website using MERN stack
+  Responsive web application for orders from top restaurants in Tel Aviv. 
+  The application is based on a real product and includes standard features relevant for the industry.
+  the code is deployed on heroku
+  https://epicure-app.herokuapp.com/
 
-# epicure-api is an old JS server
-# epicure-app is the front side code
-# epicure-server is the updated TS server 
+# epicure-api 
+ first JS server built.
+# epicure-app
+ front side code
+# epicure-server
+updated backside TS server 
 
 
-# the project development will be continued after 02.10.22
+the project development will be continued after 02.10.22
