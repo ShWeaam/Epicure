@@ -4,8 +4,7 @@
   The application is based on a real product and includes standard features relevant for the industry.
   the code is deployed on heroku
   https://epicure-app.herokuapp.com/
-  
-# UPDATE
+  UPDATE
   Since heroku pricing changed, my app was shutdown. I will update it during around the end or April. 
 
 # epicure-api 
